@@ -3,7 +3,7 @@
 # Store each value in a variable
 # See if the first and second variables add up to target value
 # If so, return them in a list
-# if not, return an empty arrays
+# If not, return an empty arrays
 
 def twoNumberSum(array, targetSum):
   for i in range(len(array)-1):
