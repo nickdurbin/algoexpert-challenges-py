@@ -17,3 +17,21 @@ def twoNumberSum(array, targetSum):
 array = [3, 5, -4, 8, 11, 1, -1, 6]
 targetSum = 10
 print(twoNumberSum(array, targetSum))
+
+# Solution Two in O(n) time | O(n) space
+# We create a dict
+# Create a variable to store the difference between the num and targetSum
+# When we subtract we store this value in the variable
+# Then simply search to see if this number exists
+# If this number exists we take our num and this
+# variable and store them in the array/dict
+# if not, we simply return the empty array as suggested.
+
+def twoNumberSum2(array, targetSum):
+  nums = {}
+  for num in array:
+    possibleNum = targetSum - num
+    if possibleNum in nums:
+      return [possibleNum, num]
+    else: nums[num] = True
+  return []
